@@ -5,7 +5,7 @@ import "hardhat/console.sol";
 
 contract dataType{
 
-     function removeOwner() public {
+     function pasByReference() pure public {
         bytes memory bts1 = "btc";
         bytes memory bts2 = bts1;
 
