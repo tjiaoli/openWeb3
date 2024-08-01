@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.6.0 <0.9.0;
 
+import "hardhat/console.sol";
 /**
 自定义值类型
 */
@@ -14,6 +15,7 @@ contract UserDefinedValueTypes{
         //自定义值类型 通常以 type C is V 来定义 C为新定义的类型，V则必须是solidity的原生类型。
        Weight w = Weight.wrap(10);
        Price p = Price.wrap(5);
+       console.log(Weight.unwrap(w));
        //自定义类型优点，1、提高了安全性 
     //以下编译会报错 因为 w 和 p是不同的类型，不能进行算术运算。这提高了类型安全性。避免直接使用，
     //随着代码量提高多一层限制， 一种编码规范。
@@ -27,6 +29,7 @@ contract UserDefinedValueTypes{
     
     uint128 u = Weight.unwrap(w1);
 
+    w1 = Weight.wrap(u);
     //自定义不能继承操作符，上面提到此功能也带来了安全性。
     // Weight sum = w + w1; 编译报错
 

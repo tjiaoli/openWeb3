@@ -20,9 +20,9 @@ contract enumTest{
         return choice;
     }
 
-    function getChoiceDown() public view returns(ActionChoices){
+    function getChoiceDown() public pure returns(ActionChoices){
         //枚举类型的最大最小值
-       type(ActionChoices).max;
+    //    type(ActionChoices).max;
       return type(ActionChoices).min;
 
         // return ActionChoices.GoDown;
