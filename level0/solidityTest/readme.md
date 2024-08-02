@@ -184,11 +184,11 @@ contract C {
 ```
 
 ### transfer 
-    加深对transfer的理解，defi中经常用到，
-    链上 在合约内 向某个地址转账语句 payable(address(<地址>)).transfer(<数额，链上原始币种>)
-    表示的是
-    当前合约 向 address(<地址>) 转账 <数额>的原始币
-    ```
+
+transfer在defi产品用的很多，需要加深理解
+链上 在合约内 向某个地址转账语句 payable(address(<地址>)).transfer(<数额，链上原始币种>)表示的是当前合约 向 address(<地址>) 转账 <数额>的原始币
+    
+ ```solidity
     //是的 要对数值提前检查，并且对balance的操作 都是先扣或者先加 在执行其他操作
     constructor() payable{
         require(msg.value >= 1 , "Initial funding is required");
@@ -201,4 +201,4 @@ contract C {
         require(w < this.getBalance(), "Initial funding is required");
         callee.transfer(w);
     }
-    ```
+```
