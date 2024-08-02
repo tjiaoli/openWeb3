@@ -1,9 +1,11 @@
 
 # 本章进行solidity 基础语法练习
 
-以下内容引用自 ：https://github.com/Rechendian/solidity_Basic/blob/60c27ecd3e419a16a9000d45c56b0477f1b1418a/README.md
+
 
 ## Solidity 基础
+
+以下内容部分引用自 ：https://github.com/Rechendian/solidity_Basic/blob/60c27ecd3e419a16a9000d45c56b0477f1b1418a/README.md
 
 为了优化 Solidity 智能合约的 gas 费用，我会采取以下策略：
 
@@ -49,6 +51,9 @@
 
 require 和 revert 主要用于处理可预见的错误，回滚状态并退还剩余的 gas，通常用于验证输入和外部调用。
 assert 用于检查不变量，确保代码逻辑正确。如果 assert 失败，意味着代码中存在严重的错误，所有剩余的 gas 会被消耗。
+
+加深一下require、assert和revert关键字 消耗gas的理解
+https://github.com/AmazingAng/WTF-Solidity/issues/93
 
 ### import 导入本地或者外部合约 new
 
@@ -101,6 +106,16 @@ contract B is A {
         require(msg.sender == owner, "Not the owner");
         _;
     }
+
+    /**modifier1 {
+      log(1)
+      modifier2 {
+        log(2)
+        function
+        log(222)
+      }
+      log(1111)
+    }*/
 ```
 
 ### 构造函数(Constructor)
