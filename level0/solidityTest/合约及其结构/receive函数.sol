@@ -42,7 +42,7 @@ contract Caller {
 
     }
 
-    // 失败，因为Callee既没有定义receive函数，也没有定义fallback函数
+    // 注释掉 callee中的 recive 或 fallback 会失败，因为Callee既没有定义receive函数，也没有定义fallback函数 
     function tryTransfer() external {
         callee.transfer(1);
     }

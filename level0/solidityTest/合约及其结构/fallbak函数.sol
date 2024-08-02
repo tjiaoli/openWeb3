@@ -9,14 +9,18 @@ pragma solidity >=0.6.0 <0.9.0;
     //被调用方 接收转账
 contract Callee {
     event FunctionCalled(string);
-
+    event weinum(uint);
+    // event gasuse(uint);
     function foo() external payable {
         emit FunctionCalled("this is foo");
     }
 
     // 你可以注释掉 receive 函数来模拟它没有被定义的情况
     receive() external payable {
-        emit FunctionCalled("this is receive");
+        // uint u = gasleft();
+        // emit  gasuse(u);此操作会造成gas增加
+        emit weinum(msg.value);
+        // emit FunctionCalled("this is receive");
     }
 
     // 你可以注释掉 fallback 函数来模拟它没有被定义的情况
@@ -34,14 +38,15 @@ contract Caller {
         callee = payable(address(new Callee()));
     }
 
+    event gasUse(uint);
     // 触发 receive 函数
     function transferReceive() external {
-        callee.transfer(1);
+        callee.transfer(100);
     }
 
     // 触发 receive 函数
     function sendReceive() external {
-        bool success = callee.send(1);
+        bool success = callee.send(100);
         require(success, "Failed to send Ether");
     }
 
