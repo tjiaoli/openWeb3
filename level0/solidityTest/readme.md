@@ -106,7 +106,7 @@ contract B is A {
         require(msg.sender == owner, "Not the owner");
         _;
     }
-
+    多层嵌套 modifier 的效果如
     /**modifier1 {
       log(1)
       modifier2 {
@@ -182,3 +182,23 @@ contract C {
     }
 }
 ```
+
+### transfer 
+    加深对transfer的理解，defi中经常用到，
+    链上 在合约内 向某个地址转账语句 payable(address(<地址>)).transfer(<数额，链上原始币种>)
+    表示的是
+    当前合约 向 address(<地址>) 转账 <数额>的原始币
+    ```
+    //是的 要对数值提前检查，并且对balance的操作 都是先扣或者先加 在执行其他操作
+    constructor() payable{
+        require(msg.value >= 1 , "Initial funding is required");
+        callee = payable(address(new Callee()));
+
+    }
+
+    // 注释掉 callee中的 recive 或 fallback 会失败，因为Callee既没有定义receive函数，也没有定义fallback函数 
+    function tryTransfer(uint w) external {
+        require(w < this.getBalance(), "Initial funding is required");
+        callee.transfer(w);
+    }
+    ```
