@@ -1,5 +1,7 @@
+
 # 使用OpenZeppelin创建代币
 了解代币的重要性以及它们在区块链中的使用方式。
+内容引用自https://github.com/RemoteCodeCamp/openWeb3/blob/ac6c0bfe05a653ee6a0048d8f1aefb557bc002b4/04.%E4%BD%BF%E7%94%A8OpenZeppelin%E5%88%9B%E5%BB%BA%E4%BB%A3%E5%B8%81.md
 ## 学习目标
 学完本模块后，你将能够：
 - 说明什么是代币
