@@ -65,7 +65,7 @@ Solidity VSCode 扩展：此扩展向 Visual Studio Code 添加了对 Solidity �
 ### 安装 solidity扩展 
 在 Visual Studio Code 的左侧边栏中，选择“扩展”。 搜索“solidity”，然后选择Nomic 基金会的 Solidity插件进行安装。
 
-![](https://github.com/RCCCamp/openWeb3/blob/main/pic/3/1.jpg)
+![](https://github.com/tjiaoli/openWeb3/blob/5445a9915049bfbb6869c4095534002d84759e86/level0/EthereumSmartContracts/picture/1.png)
 
 在使用Hardhat 扩展之前，请确保已安装： 
 - Node.js 和 npm：若要确认已安装 Node.js，请打开终端并键入node。 如果安装了 Node.js， 终端将返回计算机上的 Node.js 的版本。 也可通过在终端中键入npm来确认是否安装了 Node包管理器 (NPM)。 
