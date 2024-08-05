@@ -102,6 +102,7 @@ $ ls node_modules/@openzeppelin/contracts
 README.md build/ governance/ metatx/ proxy/ token/ 
 access/ finance/ interfaces/ package.json security/ utils/ 
 ```
+![](https://github.com/tjiaoli/openWeb3/blob/f1a5c339924331168c9a1071496f8b3dff814dcc/level0/OpenZeppelin/picture/1.png)
 花些时间查看现可用于你的项目的可用合约源文件。 请特别注意代币合约。 更好地了解每个合约的实 现以及通常提供的具体函数。 
 # 练习 - 编写⼀个 ERC20 代币合约
 现在我们设置了⼀个基本项⽬，接下来使⽤ OpenZeppelin 的 ERC20 代币标准创建⼀个新的代币合 约。 
@@ -118,6 +119,7 @@ emit LogNewAlert('_rewarded', block.coinbase, block.number);
 } 
 } 
 ```
+![](https://github.com/tjiaoli/openWeb3/blob/f1a5c339924331168c9a1071496f8b3dff814dcc/level0/OpenZeppelin/picture/2.png)
 ## 了解代码 
 现在，让我们来看看合约的各个部分。
 首先，我们导入要在 pragma 指令之后使用的 OpenZeppelin 合约。 字符串 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";允许合约找到我们将在自己的合 约中使用的 ERC20 合约定义。 
@@ -141,11 +143,12 @@ require("@nomicfoundation/hardhat-toolbox");
  }, 
  }; 
 ```
+![](https://github.com/tjiaoli/openWeb3/blob/f1a5c339924331168c9a1071496f8b3dff814dcc/level0/OpenZeppelin/picture/3.png)
 3. 保存文件。 
 4. 执行 npx hardhat compile
 编译成功后会在artifacts 文件夹生成相应的文件 
 
-![](https://github.com/RCCCamp/openWeb3/blob/main/pic/4/3.png)
+![](https://github.com/tjiaoli/openWeb3/blob/f1a5c339924331168c9a1071496f8b3dff814dcc/level0/OpenZeppelin/picture/4.png)
 
 请注意，除了合约文件夹中定义的合约外，@openzeppelin/contracts 中的合约也进行了编译。 在继续之前，请确保已成功完成生成。 
 ## 总结 
