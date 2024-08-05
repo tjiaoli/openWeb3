@@ -78,11 +78,11 @@ npm install --save-dev hardhat
 3. 用hardhat 创建示例项目：
 npx hardhat init
 
-![](https://github.com/RCCCamp/openWeb3/blob/main/pic/3/2.png)
+![](https://github.com/tjiaoli/openWeb3/blob/5445a9915049bfbb6869c4095534002d84759e86/level0/EthereumSmartContracts/picture/2.png)
 
 我们就按照默认的选项快速创建项目
 
-![](https://github.com/RCCCamp/openWeb3/blob/main/pic/3/3.png)
+![](https://github.com/tjiaoli/openWeb3/blob/5445a9915049bfbb6869c4095534002d84759e86/level0/EthereumSmartContracts/picture/3.png)
 
 创建 Solidity 项⽬后，查看该项目的文件。 
 该项目包含 Solidity 代码样板。 请注意以下目录：
@@ -97,20 +97,20 @@ npx hardhat init
 我们将从“contracts”文件夹内的Lock.sol 智能合约开始。
 在命令行运行：npx hardhat compile
 
-![](https://github.com/RCCCamp/openWeb3/blob/main/pic/3/4.png)
+![](https://github.com/tjiaoli/openWeb3/blob/5445a9915049bfbb6869c4095534002d84759e86/level0/EthereumSmartContracts/picture/4.png)
 
 编译成功后会⽣成artifacts文件夹
 ### 部署合约 
 成功编译合约后，可以在本地部署它
 1. 这里我们先将合约部署到hardhat 内置的本地网络，启动本地网络：npx hardhat node 启动成功后会生成20个账号已经对应的私钥(这里的窗口暂时不能退出，第二步需要单独创建一个窗口)
 
-![](https://github.com/RCCCamp/openWeb3/blob/main/pic/3/5.png)
+![](https://github.com/tjiaoli/openWeb3/blob/5445a9915049bfbb6869c4095534002d84759e86/level0/EthereumSmartContracts/picture/5.png)
 
 2. 部署合约。运行：
 npx hardhat ignition deploy ./ignition/modules/Lock.js --network localhost 
 然后我们将看到部署后的信息如下： 
 
-![](https://github.com/RCCCamp/openWeb3/blob/main/pic/3/6.png)
+![](https://github.com/tjiaoli/openWeb3/blob/5445a9915049bfbb6869c4095534002d84759e86/level0/EthereumSmartContracts/picture/6.png)
 
 其中部署后的lock合约地址在上图最后⼀行；
 # 练习 - 编写智能合约 
@@ -173,7 +173,7 @@ npx hardhat node
 2. 执行部署命令：
 npx hardhat ignition deploy ignition/modules/Shipping.js --network localhost
 
-![](https://github.com/RCCCamp/openWeb3/blob/main/pic/3/7.png)
+![](https://github.com/tjiaoli/openWeb3/blob/5445a9915049bfbb6869c4095534002d84759e86/level0/EthereumSmartContracts/picture/7.png)
 
 执行结果如上
 # 练习 - 测试智能合约  
@@ -215,4 +215,4 @@ await expect(shippingContract.Delivered()) // 验证事件是否被触发
 npx hardhat test test/Shipping.js
 应该看到所有测试都成功通过：
 
-![](https://github.com/RCCCamp/openWeb3/blob/main/pic/3/8.png)
+![](https://github.com/tjiaoli/openWeb3/blob/5445a9915049bfbb6869c4095534002d84759e86/level0/EthereumSmartContracts/picture/8.png)
